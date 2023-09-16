@@ -11,8 +11,8 @@
   box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  // font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  //   Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #191919;
   font-family: "Inter", sans-serif;
 }
@@ -41,6 +41,22 @@
     background: #191919;
     border-color: #191919;
     color: white;
+    transition: color 0.3s, background 0.3s;
+  }
+}
+
+.blackButton {
+  background: #191919;
+  color: #FFF;
+  border-color: #191919;
+  margin-top: 20px;
+  text-align: center;
+  // width: 238px;
+  // height: 56px;
+  
+  &:hover {
+    background: #FFF;
+    color: #191919;
     transition: color 0.3s, background 0.3s;
   }
 }
@@ -510,106 +526,333 @@ header {
 
 .aboutCompanySection {
   .container {
-    .sectionTitle {
+    text-align: center;
+    margin-top: 80px;
+    // padding: 100px;
 
+    @media(min-width: 992px) {
+      text-align: start;
     }
-    .founder {
-      position: relative;
-        display: inline-block;
-      img {
 
-        @media(min-width: 1400px) {
-          width: auto;
-          height: 615px;
-          
-
-        }
-      }
-      .founderInfo {
-        
-
-        @media(min-width: 1400px) {
-          position: absolute;
-          bottom: 100px;
-          left:-50px;
-          right: 0;
-          // color: #191919;
-          padding: 10px;
-          text-align: center;
-          border: solid red 2px;
-          background: #beebff;
-          width: 368px;
-          height: 150px;
-          text-align: start;
-
-        }
-
-        h3 {
-          font-family: "DM Sans", sans-serif;
-
-          @media(min-width: 1400px) {
-            margin-bottom: 30px;
-          }
-        }
-        span {
-          font-family: "DM Sans", sans-serif;
-          font-weight: 700;
-
-          @media(min-width: 1400px) {
-            color:#f94d1c;
-            font-size: 20px;
-          }
-        }
-
-        p {
-
-          @media(min-width: 1400px) {
-            
-          }
-        }
-      }
+    @media(min-width: 1400px) {
+      margin-top: 120px;
+      text-align: start;
     }
     .aboutCompany {
+      display: grid;
+      grid-template-columns: 1fr;
 
-    }
-    .centerbutton {
-      display: grtid;
-      grid-template-columns: 1fr auto 1fr;
+      @media(min-width: 992px) {
+        display: flex;
+        flex-direction: row-reverse;
+      }
 
-      .blackButton {
-        background: #191919;
-        color: #FFF;
-        border-color: #191919;
-        margin-top: 20px;
-        text-align: center;
-        width: 238px;
-        height: 56px;
+      @media(min-width: 1400px) {
+        // grid-template-columns: 1fr auto;
+        // display: flex;
+        // flex-direction: row-reverse;
+        // padding-top:50px;
+
+      }
+
+      .aboutCompanyInfo{
         
+        @media(min-width: 992px) {
+          text-align: start;
+          margin-left: 80px;
 
-        &:hover {
-          background: #FFF;
-          color: #191919;
-          transition: color 0.3s, background 0.3s;
+        }
+
+        @media(min-width: 1400px) {
+          // display:flex;
+          // flex-direction: row-reverse;
+        }
+
+        .sectionTitle{
+          padding-top: 0;
+
+          @media(min-width: 769px) {
+            padding-bottom: 0;
+          }
+
+          @media(min-width: 992px) {
+            padding: 0;
+            text-align: start;
+          }
+          
+          @media(min-width: 1400px) {
+            text-align: start;
+            
+          }
+          p {
+            @media(min-width: 992px) {
+              font-size: 18px;
+            }
+          }
+          h2 {
+            @media(min-width: 992px) {
+              font-size: 35px;
+            }
+          }
+
+        }
+
+        .aboutCompanyText{
+          p {
+            // font-size: 12px;
+
+            @media(min-width: 769px) {
+              margin-top: 40px;
+            }
+
+            @media(min-width: 992px) {
+              margin: 0;
+              padding-top: 20px;
+              
+            }
+          }
+        }
+
+        .buttonAndVideo {
+          margin-bottom: 40px;
+          display: grid;
+          grid-template-columns: 1fr;
+
+          @media(min-width: 992px) {
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+
+          }
+
+          @media(min-width: 1400px) {
+            display: flex;
+            margin-top: 100px;
+          }
+    
+          .buttonTheme, .blackbutton {
+
+            @media(min-width: 992px) {
+              width: 150px;
+              text-align: center;
+              margin-right: 60px;
+              
+            }
+            
+            @media(min-width: 1400px) {
+              width: 180px;
+              margin-right: 60px;
+              
+            }
+          }
+
+          .playBtnAndIntroVideo{
+            display: grid;
+            justify-content: center;
+            margin-top: 20px;
+            align-items: center;
+
+
+            @media(min-width: 769px) {
+              
+              
+              &:hover {
+                background: #f9d783;
+                border-radius: 20px;
+                transition: background .3s;
+              }
+            }
+
+            @media(min-width: 992px) {
+              display: flex;
+              padding: 5px; 
+
+            }
+    
+            @media(min-width: 1400px) {
+              display: grid;
+              grid-template-columns: auto auto;
+              align-items: center;
+            }
+    
+            .playButton{
+    
+              i{
+                border: solid #191919 1px;
+                font-size: 10px;
+                border-radius: 50%;
+                padding: 15px;
+                margin-right: 20px;
+
+                &:hover {
+                  // background: #191919;
+                  // color: #FFF;
+                  // transition: color .3s, background .3s;
+
+                }
+              }
+    
+            }
+            .introVideo {
+              text-decoration: none;
+              color: #191919;
+
+              &:hover {
+                // background: #191919;
+                // color: #FFF;
+                // border-radius: 5px;
+                // transition: color .3s, background .3s;
+              }
+            }
+          }
         }
       }
-      .playButton {
-        border: solid #DAD9D3 2px;
-        padding: 3px;
-        border-radius: 25px;
-        font-size: 10px;
 
-        i {
-          font-size: 10px;
-          padding: 10px;
-          color: #191919;
+      .founder {
+        position: relative;
+        margin-bottom: 20px;
+        // text-align: center;
+
+        img {
+          width: 250px;
+
+          @media(min-width: 992px) {
+            width: 300px;
+            margin-right: 70px;
+            margin-left: 90px;
+          }
+          
+
+          @media(min-width: 1400px) {
+            position: relative;
+            height: 615px;
+            width: auto;
+            margin-right: 70px;
+
+          }
         }
-      }
-      .introVideo {
+        .founderInfo{
+
+          @media(min-width: 992px) {
+            position: absolute;
+              bottom: 100px;
+              left: 40px;
+              padding: 20px;
+              text-align: center;
+              // border: solid red 2px;
+              background: #beebff;
+              width: 320px;
+              height: 150px;
+              text-align: start;
+          }
+          
+
+          @media(min-width: 1400px) {
+              position: absolute;
+              bottom: 100px;
+              left: 40px;
+              padding: 20px;
+              text-align: center;
+              // border: solid red 2px;
+              background: #beebff;
+              width: 300px;
+              height: 150px;
+              text-align: start;
+              
+            }
+          h3 {
+            font-family: "DM Sans", sans-serif;
+            font-weight: 700;
+
+            @media(min-width: 992px) {
+              font-size: 18px;
+            }
+
+            @media(min-width: 1400px) {
+              font-size: 20px;
+              
+            }
+
+
+            span {
+              color: #f94d1c;
+
+              @media(min-width: 992px) {
+                font-weight: 700;
+                
+              }
+
+              @media(min-width: 1400px) {
+              
+
+              }
+            }
+
+          }
+          p {
+
+            @media(min-width: 992px) {
+              font-size: 14px;
+              padding-top: 20px;
+            }
+          }
+        }
 
       }
     }
   }
 }
+  
+          
+
+          // @media(min-width: 1400px) {
+          //   position: absolute;
+          //   bottom: 100px;
+          //   left:-50px;
+          //   right: 0;
+          //   // color: #191919;
+          //   padding: 10px;
+          //   text-align: center;
+          //   border: solid red 2px;
+          //   background: #beebff;
+          //   width: 368px;
+          //   height: 150px;
+          //   text-align: start;
+
+          // }
+
+      // .centerbutton {
+      //   display: grtid;
+      //   grid-template-columns: 1fr auto 1fr;
+
+      //   .blackButton {
+      //     background: #191919;
+      //     color: #FFF;
+      //     border-color: #191919;
+      //     margin-top: 20px;
+      //     text-align: center;
+      //     width: 238px;
+      //     height: 56px;
+          
+
+      //     &:hover {
+      //       background: #FFF;
+      //       color: #191919;
+      //       transition: color 0.3s, background 0.3s;
+      //     }
+      //   }
+      //   .playButton {
+      //     border: solid #DAD9D3 2px;
+      //     padding: 3px;
+      //     border-radius: 25px;
+      //     font-size: 10px;
+
+      //     i {
+      //       font-size: 10px;
+      //       padding: 10px;
+      //       color: #191919;
+      //     }
+
 
 .projectAndCaseSection {
   .container {
@@ -699,22 +942,7 @@ header {
       margin-top: 45px;
       margin-bottom: 90px;
 
-      .blackButton {
-        background: #191919;
-        color: #FFF;
-        border-color: #191919;
-        margin-top: 20px;
-        text-align: center;
-        width: 238px;
-        height: 56px;
-        
-
-        &:hover {
-          background: #FFF;
-          color: #191919;
-          transition: color 0.3s, background 0.3s;
-        }
-      }
+      
     }
   }
 }
