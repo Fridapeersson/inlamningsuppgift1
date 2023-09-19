@@ -28,10 +28,6 @@
   font-size: 16px;
   cursor: pointer;
 
-  .arrow {
-    color: inherit;
-  }
-
   i {
     margin: 5px;
     font-size: 12px;
@@ -58,6 +54,21 @@
     background: #FFF;
     color: #191919;
     transition: color 0.3s, background 0.3s;
+  }
+}
+
+.transparentButton {
+  background: transparent;
+  border-color: #191919;
+  margin-bottom: 50px;
+
+  @media (min-width: 992px) {
+    margin-bottom: 150px;
+  }
+
+  &:hover {
+    color: white;
+    background-color: #191919;
   }
 }
 
@@ -330,18 +341,18 @@ header {
           }
         }
         .learnMoreBtn {
-          background: #f0efe9;
-          border-color: #191919;
-          margin-bottom: 50px;
+          // background: #f0efe9;
+          // border-color: #191919;
+          // margin-bottom: 50px;
 
-          @media (min-width: 992px) {
-            margin-bottom: 150px;
-          }
+          // @media (min-width: 992px) {
+          //   margin-bottom: 150px;
+          // }
 
-          &:hover {
-            color: white;
-            background-color: #191919;
-          }
+          // &:hover {
+          //   color: white;
+          //   background-color: #191919;
+          // }
         }
       }
       .showcaseImg {
@@ -594,7 +605,6 @@ header {
               font-size: 35px;
             }
           }
-
         }
 
         .aboutCompanyText{
@@ -664,9 +674,9 @@ header {
             }
 
             @media(min-width: 992px) {
-              display: flex;
+              display: grid;
+              grid-template-columns: 1fr auto;
               padding: 5px; 
-
             }
     
             @media(min-width: 1400px) {
@@ -683,26 +693,11 @@ header {
                 border-radius: 50%;
                 padding: 15px;
                 margin-right: 20px;
-
-                &:hover {
-                  // background: #191919;
-                  // color: #FFF;
-                  // transition: color .3s, background .3s;
-
-                }
               }
-    
             }
             .introVideo {
               text-decoration: none;
               color: #191919;
-
-              &:hover {
-                // background: #191919;
-                // color: #FFF;
-                // border-radius: 5px;
-                // transition: color .3s, background .3s;
-              }
             }
           }
         }
@@ -797,61 +792,105 @@ header {
             }
           }
         }
-
       }
     }
   }
 }
   
           
+.ourServicesSection {
+  background: #F0EFE9;
+  .container {
+    .ourServices{
+      .sectionTitle{
+        p{
 
-          // @media(min-width: 1400px) {
-          //   position: absolute;
-          //   bottom: 100px;
-          //   left:-50px;
-          //   right: 0;
-          //   // color: #191919;
-          //   padding: 10px;
-          //   text-align: center;
-          //   border: solid red 2px;
-          //   background: #beebff;
-          //   width: 368px;
-          //   height: 150px;
-          //   text-align: start;
+        }
+        h2{
 
-          // }
+        }
 
-      // .centerbutton {
-      //   display: grtid;
-      //   grid-template-columns: 1fr auto 1fr;
+        @media(min-width: 992px) {
+          // text-align: start;
+        }
 
-      //   .blackButton {
-      //     background: #191919;
-      //     color: #FFF;
-      //     border-color: #191919;
-      //     margin-top: 20px;
-      //     text-align: center;
-      //     width: 238px;
-      //     height: 56px;
+      }
+      .boxesContainer{
+        border: solid red 2px;
+        
+        @media(min-width: 992px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          
+          
+          // gap: 30px;
+          // text-align: center;
+        }
+
+        .boxes{
+          border: solid blue 2px;
+          display: grid;
+          text-align: center;
+          margin-bottom: 50px;
+          // border: solid red 2px;
+
+          @media(min-width: 992px) {
+            width: 250px;
+            text-align: center;
+            
+          }
+
           
 
-      //     &:hover {
-      //       background: #FFF;
-      //       color: #191919;
-      //       transition: color 0.3s, background 0.3s;
-      //     }
-      //   }
-      //   .playButton {
-      //     border: solid #DAD9D3 2px;
-      //     padding: 3px;
-      //     border-radius: 25px;
-      //     font-size: 10px;
+          // Hover effekt när man hovrar över boxarna
+          &:hover {
+            background: #f9d783;
+        
+            .blackButton {
+              background: #fff;
+        
+              i {
+                color: #191919;
+              }
+            }
+          }
 
-      //     i {
-      //       font-size: 10px;
-      //       padding: 10px;
-      //       color: #191919;
-      //     }
+          i {
+            color: #FFF;
+          }
+          
+
+
+          h3{
+            font-weight: 700;
+            margin: 20px 0;
+          }
+          p{
+
+          }
+
+          .boxesButton{
+            display: flex;
+            justify-content: end;
+
+            .blackButton {
+              border-radius: 50%;
+              padding: 5px 10px;
+              margin-right: 15px;
+
+
+            }
+          }
+        }
+        .browseServices{
+          .buttonTheme {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}
 
 
 .projectAndCaseSection {

@@ -22,9 +22,6 @@
   font-size: 16px;
   cursor: pointer;
 }
-.buttonTheme .arrow {
-  color: inherit;
-}
 .buttonTheme i {
   margin: 5px;
   font-size: 12px;
@@ -47,6 +44,21 @@
   background: #FFF;
   color: #191919;
   transition: color 0.3s, background 0.3s;
+}
+
+.transparentButton {
+  background: transparent;
+  border-color: #191919;
+  margin-bottom: 50px;
+}
+@media (min-width: 992px) {
+  .transparentButton {
+    margin-bottom: 150px;
+  }
+}
+.transparentButton:hover {
+  color: white;
+  background-color: #191919;
 }
 
 .centerButton {
@@ -300,20 +312,6 @@ header .container .mainMenu .loginButton {
   .showcase .container .showcaseContent .headerAndText .learnMoreBtn {
     width: 208px;
   }
-}
-.showcase .container .showcaseContent .headerAndText .learnMoreBtn {
-  background: #f0efe9;
-  border-color: #191919;
-  margin-bottom: 50px;
-}
-@media (min-width: 992px) {
-  .showcase .container .showcaseContent .headerAndText .learnMoreBtn {
-    margin-bottom: 150px;
-  }
-}
-.showcase .container .showcaseContent .headerAndText .learnMoreBtn:hover {
-  color: white;
-  background-color: #191919;
 }
 .showcase .container .showcaseContent .showcaseImg {
   display: none;
@@ -633,7 +631,8 @@ header .container .mainMenu .loginButton {
 }
 @media (min-width: 992px) {
   .aboutCompanySection .container .aboutCompany .aboutCompanyInfo .buttonAndVideo .playBtnAndIntroVideo {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
     padding: 5px;
   }
 }
@@ -730,6 +729,59 @@ header .container .mainMenu .loginButton {
     font-size: 14px;
     padding-top: 20px;
   }
+}
+
+.ourServicesSection {
+  background: #F0EFE9;
+}
+.ourServicesSection .container .ourServices .boxesContainer {
+  border: solid red 2px;
+}
+@media (min-width: 992px) {
+  .ourServicesSection .container .ourServices .boxesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.ourServicesSection .container .ourServices .boxesContainer .boxes {
+  border: solid blue 2px;
+  display: grid;
+  text-align: center;
+  margin-bottom: 50px;
+}
+@media (min-width: 992px) {
+  .ourServicesSection .container .ourServices .boxesContainer .boxes {
+    width: 250px;
+    text-align: center;
+  }
+}
+.ourServicesSection .container .ourServices .boxesContainer .boxes:hover {
+  background: #f9d783;
+}
+.ourServicesSection .container .ourServices .boxesContainer .boxes:hover .blackButton {
+  background: #fff;
+}
+.ourServicesSection .container .ourServices .boxesContainer .boxes:hover .blackButton i {
+  color: #191919;
+}
+.ourServicesSection .container .ourServices .boxesContainer .boxes i {
+  color: #FFF;
+}
+.ourServicesSection .container .ourServices .boxesContainer .boxes h3 {
+  font-weight: 700;
+  margin: 20px 0;
+}
+.ourServicesSection .container .ourServices .boxesContainer .boxes .boxesButton {
+  display: flex;
+  justify-content: end;
+}
+.ourServicesSection .container .ourServices .boxesContainer .boxes .boxesButton .blackButton {
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-right: 15px;
+}
+.ourServicesSection .container .ourServices .boxesContainer .browseServices .buttonTheme {
+  margin-top: 50px;
 }
 
 @media (min-width: 992px) {
