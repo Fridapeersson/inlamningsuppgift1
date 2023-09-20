@@ -740,32 +740,52 @@ header .container .mainMenu .loginButton {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 120px;
+    padding-bottom: 90px;
   }
 }
 @media (min-width: 992px) {
   .whyChooseUsSection .container .contentContainer {
     display: flex;
     flex-direction: column;
-    border: solid red 2px;
-    width: 400px;
   }
+}
+.whyChooseUsSection .container .contentContainer .sectionTitle {
+  font-weight: 700;
 }
 @media (min-width: 992px) {
   .whyChooseUsSection .container .contentContainer .sectionTitle {
     text-align: left;
+    margin-left: 40px;
     padding-top: 0;
+  }
+}
+@media (min-width: 1400px) {
+  .whyChooseUsSection .container .contentContainer .sectionTitle {
+    margin-left: 80px;
+    font-size: 46px;
+    width: 60%;
   }
 }
 .whyChooseUsSection .container .contentContainer .content {
   display: flex;
   align-items: center;
   text-align: center;
+  align-items: center;
   margin: 20px;
-  border: solid blue 2px;
 }
 @media (min-width: 992px) {
   .whyChooseUsSection .container .contentContainer .content {
     text-align: left;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin: 0;
+  }
+}
+@media (min-width: 1400px) {
+  .whyChooseUsSection .container .contentContainer .content {
+    justify-content: start;
+    margin-left: 80px;
   }
 }
 .whyChooseUsSection .container .contentContainer .content i {
@@ -777,16 +797,23 @@ header .container .mainMenu .loginButton {
 .whyChooseUsSection .container .contentContainer .content .headerAndText {
   margin-left: 20px;
 }
+@media (min-width: 992px) {
+  .whyChooseUsSection .container .contentContainer .content .headerAndText {
+    padding: 0;
+    margin-top: 10px;
+  }
+}
 .whyChooseUsSection .container .contentContainer .content .headerAndText h3 {
   font-weight: 600;
+  font-size: 18px;
 }
 .whyChooseUsSection .container .imgContainer {
   display: grid;
   grid-template-columns: 1fr;
   padding: 20px;
+  position: relative;
 }
 .whyChooseUsSection .container .imgContainer img {
-  border: solid red 2px;
   display: none;
 }
 @media (min-width: 992px) {
@@ -794,19 +821,40 @@ header .container .mainMenu .loginButton {
     display: block;
     width: 100%;
     margin-top: 20px;
+    height: 350px;
     z-index: 0;
   }
 }
-@media (min-width: 992px) {
-  .whyChooseUsSection .container .imgContainer .background {
-    width: 100%;
-    height: 150px;
-    background: lightgray;
-    position: relative;
-    z-index: -1;
-    top: -200px;
+@media (min-width: 1400px) {
+  .whyChooseUsSection .container .imgContainer img {
+    width: 95%;
   }
 }
+@media (min-width: 992px) {
+  .whyChooseUsSection .container .background {
+    width: 106%;
+    height: 360px;
+    background: #F0EFE9;
+    position: absolute;
+    top: 155px;
+    z-index: -1;
+  }
+}
+@media (min-width: 1200px) {
+  .whyChooseUsSection .container .background {
+    width: 112%;
+    height: 315px;
+  }
+}
+@media (min-width: 1400px) {
+  .whyChooseUsSection .container .background {
+    height: 365px;
+    width: 120%;
+    left: -50px;
+    top: 180px;
+  }
+}
+
 @media (min-width: 992px) {
   .projectAndCaseSection .container .sectionTitle {
     align-items: center;
@@ -884,4 +932,94 @@ header .container .mainMenu .loginButton {
 .projectAndCaseSection .container .centerButton {
   margin-top: 45px;
   margin-bottom: 90px;
+}
+
+.meetOurTeamSection {
+  background-color: #f9d783;
+}
+.meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .sectionTitle {
+  display: flex;
+  align-items: start;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .sectionTitle {
+    margin-left: 40px;
+  }
+}
+.meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .btn {
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .btn {
+    margin-top: 50px;
+    margin-right: -10px;
+  }
+}
+.meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .btn a {
+  color: #191919;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .team .cards {
+    display: flex;
+  }
+}
+@media (min-width: 1400px) {
+  .meetOurTeamSection .container .meetOurTeam .team .cards {
+    justify-content: space-evenly;
+  }
+}
+.meetOurTeamSection .container .meetOurTeam .team .cards .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #f9d783;
+  border: none;
+}
+.meetOurTeamSection .container .meetOurTeam .team .cards .card img {
+  width: 60%;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .team .cards .card img {
+    width: 85%;
+  }
+}
+@media (min-width: 1400px) {
+  .meetOurTeamSection .container .meetOurTeam .team .cards .card img {
+    width: 100%;
+  }
+}
+.meetOurTeamSection .container .meetOurTeam .team .cards .card h3 {
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .team .cards .card h3 {
+    font-size: 22px;
+  }
+}
+.meetOurTeamSection .container .meetOurTeam .dots {
+  display: flex;
+  justify-content: center;
+}
+.meetOurTeamSection .container .meetOurTeam .dots .dot {
+  font-size: 80px;
+  color: #191919;
+  opacity: 0.2;
+  margin-left: 5px;
+}
+.meetOurTeamSection .container .meetOurTeam .dots .blackDot {
+  color: #191919;
+  opacity: 1;
 }

@@ -759,27 +759,27 @@ header {
       display: grid;
       grid-template-columns: 1fr 1fr;
       padding-top: 120px;
+      padding-bottom: 90px;
     }
 
     .contentContainer {
       @media (min-width: 992px) {  
-        // display: grid;
-        // grid-template-columns: 1fr;
         display: flex;
         flex-direction: column;
-        border: solid red 2px;
-        width: 400px;
+
       }
 
       .sectionTitle {
+        font-weight: 700;
         @media (min-width: 992px) {
           text-align: left;
-          // width: 50%;
+          margin-left: 40px;
           padding-top: 0;
         }
-        p {
-        }
-        h2 {
+        @media(min-width: 1400px) {
+          margin-left: 80px;
+          font-size: 46px;
+          width: 60%; 
         }
       }
 
@@ -787,11 +787,19 @@ header {
         display: flex;
         align-items: center;
         text-align: center;
+        align-items: center;
         margin: 20px;
-        border: solid blue 2px;
 
         @media (min-width: 992px) {
           text-align: left;
+          justify-content: center;
+          align-items: center;
+          text-align: left;
+          margin: 0;
+        }
+        @media(min-width: 1400px) {
+          justify-content: start;
+          margin-left: 80px
         }
 
         i {
@@ -806,11 +814,12 @@ header {
           margin-left: 20px;
 
           @media (min-width: 992px) {
+            padding: 0;
+            margin-top: 10px;
           }
           h3 {
             font-weight: 600;
-          }
-          p {
+            font-size: 18px;
           }
         }
       }
@@ -819,103 +828,46 @@ header {
       display:grid;
       grid-template-columns: 1fr;
       padding: 20px;
+      position: relative;
+
       img {
-        border: solid red 2px;
         display: none;
+
         @media (min-width: 992px) {
           display: block;
-          // width: 450px;
-          width: 100%;
+          width: 100%; 
           margin-top: 20px;
+          height: 350px;
           z-index: 0;
         }
+        @media (min-width: 1400px) {
+          width: 95%;
+        }
       }
-      .background{
+    }
+    .background{
 
-        @media(min-width: 992px) {
-          width: 100%;
-          height: 150px;
-          background: lightgray;
-          position: relative;
-          z-index: -1;
-          top: -200px;
-        }
-        @media(min-width: 1400px) {
-         
-        }
+      @media(min-width: 992px) {
+        width: 106%;
+        height: 360px;
+        background: #F0EFE9;
+        position: absolute;
+        top: 155px;
+        z-index: -1;
+      }
+      @media(min-width: 1200px) {
+        width: 112%;
+        height: 315px;
+      }
+      @media(min-width: 1400px) {
+        height: 365px;
+        width: 120%;
+       left: -50px;
+       top: 180px;
       }
     }
   }
 }
-
-// .whyChooseUsSection {
-//   .container {
-//     border: solid red 1px;
-//     // display: flex;
-//     // display: grid;
-//     // grid-template-columns: 1fr;
-
-//     @media(min-width: 992px) {
-//       display: inline-flex;
-//       // grid-template-columns: 1fr 1fr;
-
-//     }
-//     .whyChooseUs {
-//       // display: flex;
-//       // flex-direction: column;
-
-//       @media(min-width: 992px) {
-//         // text-align: left;
-//       }
-//       .sectionTitle {
-//         @media(min-width: 992px) {
-
-//         }
-//       }
-//         .contentBox {
-//           // display: flex;
-//           // align-items: center;
-//           // text-align: center;
-//           border: solid red 1px;
-
-//           @media(min-width: 992px) {
-//           // text-align: left;
-//           }
-
-//           i {
-//             border: solid RGBA(25,25,25,0.1 ) 2px;
-//             border-radius: 50%;
-//             padding: 15px;
-//             margin-right: 15px;
-//             margin-left: 15px;
-//             font-size: 20px;
-
-//           }
-//           .headerAndText{
-//             h3 {
-//               // margin-top: 20px;
-//               // font-weight: 600;
-//             }
-//             p {
-//             }
-//           }
-//         }
-//         .imgContainer {
-//           .background{
-
-//           }
-//           img {
-//             display: none;
-
-//             @media(min-width: 992px) {
-//               display: block;
-//               width: 300px;
-//             }
-//           }
-//         }
-//     }
-//   }
-// }
 
 .projectAndCaseSection {
   .container {
@@ -998,6 +950,121 @@ header {
     .centerButton {
       margin-top: 45px;
       margin-bottom: 90px;
+    }
+  }
+}
+
+.meetOurTeamSection{
+  background-color: #f9d783;
+  .container{
+    .meetOurTeam{
+      .sectionTitleWithButton {
+        display: flex;
+        flex-direction: column;
+
+        @media(min-width: 992px) {
+          // border: solid red 2px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        
+        .sectionTitle {
+          display: flex;
+          align-items: start;
+
+          @media(min-width: 992px) {
+            margin-left: 40px;
+          }
+
+          p {
+
+          }
+          h3 {
+            
+          }
+          
+        }
+        .btn {
+          margin-bottom: 20px;
+
+          @media(min-width: 992px) {
+            margin-top: 50px;
+            margin-right: -10px;
+          }
+
+          a {
+            color: #191919;
+          }
+        }
+
+      }
+
+      .team {
+        .cards {
+          @media(min-width: 992px) {
+              display: flex;
+          }
+          @media(min-width: 1400px) {
+            justify-content: space-evenly;
+  
+          }
+          .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            background-color: #f9d783;
+            border: none;
+
+            @media(min-width: 992px) {
+
+            }
+
+            img {
+              width: 60%;
+
+              @media(min-width: 992px) {
+                width: 85%;
+              }
+
+              @media(min-width: 1400px) {
+                width: 100%;
+
+              }
+
+            }
+            h3{
+              font-weight: 700;
+
+              @media(min-width: 992px) {
+                font-size: 22px;
+              }
+            }
+            p {
+
+            }
+          }
+        }
+      }
+      .dots {
+        display: flex;
+        justify-content: center;
+        .dot {
+          font-size: 80px;
+          color: #191919;
+          opacity: .2;
+          margin-left: 5px;
+
+        }
+        .blackDot {
+          color: #191919;
+          opacity: 1;
+        }
+      }
+
     }
   }
 }
