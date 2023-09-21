@@ -32,33 +32,64 @@
   color: white;
   transition: color 0.3s, background 0.3s;
 }
+.buttonTheme:hover i {
+  color: #fff;
+  transition: 0.3s;
+}
 
 .blackButton {
   background: #191919;
-  color: #fff;
+  border-radius: 20px;
   border-color: #191919;
-  margin-top: 20px;
-  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+.blackButton i {
+  color: #fff;
+  margin: 5px;
 }
 .blackButton:hover {
   background: #fff;
   color: #191919;
+  border: solid #191919 1px;
   transition: color 0.3s, background 0.3s;
+}
+.blackButton:hover i {
+  color: #191919;
+  transition: 0.3s;
 }
 
 .transparentButton {
   background: transparent;
-  border-color: #191919;
-  margin-bottom: 50px;
+  border-radius: 20px;
+  border: 1px solid #191919;
+  color: #191919;
+  text-decoration: none;
+  padding: 12px 25px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
 }
 @media (min-width: 992px) {
   .transparentButton {
     margin-bottom: 150px;
   }
 }
+.transparentButton i {
+  color: #191919;
+}
 .transparentButton:hover {
-  color: white;
-  background-color: #191919;
+  background: #191919;
+  color: #fff;
+  transition: color 0.3s, background 0.3s;
+}
+.transparentButton:hover i {
+  color: #fff;
+  transition: 0.3s;
 }
 
 .centerButton {
@@ -344,14 +375,9 @@ header .container .mainMenu .loginButton {
     padding: 25px;
   }
 }
-@media (min-width: 768px) {
-  .featuresSection .container .sectionTitle {
-    padding-top: 50px;
-    padding-left: 50px;
-  }
-}
 @media (min-width: 992px) {
   .featuresSection .container .sectionTitle {
+    padding-left: 50px;
     text-align: start;
   }
 }
@@ -457,6 +483,7 @@ header .container .mainMenu .loginButton {
   margin-right: 12px;
   color: RGBA(25, 25, 25, 0.7);
 }
+
 .aboutCompanySection .container {
   text-align: center;
   margin-top: 50px;
@@ -519,16 +546,19 @@ header .container .mainMenu .loginButton {
 }
 @media (min-width: 992px) {
   .aboutCompanySection .container .aboutCompany .aboutCompanyInfo .buttonAndVideo {
-    display: flex;
     flex-direction: row;
     justify-content: start;
     margin-top: 50px;
   }
 }
+.aboutCompanySection .container .aboutCompany .aboutCompanyInfo .buttonAndVideo .buttonTheme,
+.aboutCompanySection .container .aboutCompany .aboutCompanyInfo .buttonAndVideo .blackbutton {
+  margin: 20px;
+}
 @media (min-width: 992px) {
   .aboutCompanySection .container .aboutCompany .aboutCompanyInfo .buttonAndVideo .buttonTheme,
   .aboutCompanySection .container .aboutCompany .aboutCompanyInfo .buttonAndVideo .blackbutton {
-    width: 150px;
+    width: 160px;
     margin-right: 60px;
   }
 }
@@ -536,12 +566,13 @@ header .container .mainMenu .loginButton {
   .aboutCompanySection .container .aboutCompany .aboutCompanyInfo .buttonAndVideo .buttonTheme,
   .aboutCompanySection .container .aboutCompany .aboutCompanyInfo .buttonAndVideo .blackbutton {
     width: 180px;
+    height: 56px;
+    text-align: center;
   }
 }
 .aboutCompanySection .container .aboutCompany .aboutCompanyInfo .buttonAndVideo .playBtnAndIntroVideo {
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 20px;
   align-items: center;
 }
 @media (min-width: 769px) {
@@ -728,6 +759,7 @@ header .container .mainMenu .loginButton {
 }
 .ourServicesSection .container .browseServices .buttonTheme {
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 @media (min-width: 992px) {
   .ourServicesSection .container .browseServices .buttonTheme {
@@ -770,12 +802,11 @@ header .container .mainMenu .loginButton {
   display: flex;
   align-items: center;
   text-align: center;
-  align-items: center;
+  justify-content: center;
   margin: 20px;
 }
 @media (min-width: 992px) {
   .whyChooseUsSection .container .contentContainer .content {
-    text-align: left;
     justify-content: center;
     align-items: center;
     text-align: left;
@@ -936,6 +967,13 @@ header .container .mainMenu .loginButton {
 
 .meetOurTeamSection {
   background-color: #f9d783;
+  padding-bottom: 50px;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection {
+    padding-top: 120px;
+    padding-bottom: 90px;
+  }
 }
 .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton {
   display: flex;
@@ -951,11 +989,12 @@ header .container .mainMenu .loginButton {
 }
 .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .sectionTitle {
   display: flex;
-  align-items: start;
+  align-items: center;
 }
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .sectionTitle {
-    margin-left: 40px;
+    padding-left: 60px;
+    align-items: start;
   }
 }
 .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .btn {
@@ -963,21 +1002,19 @@ header .container .mainMenu .loginButton {
 }
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .btn {
-    margin-top: 50px;
-    margin-right: -10px;
+    margin-right: 25px;
+    margin-top: 55px;
   }
 }
-.meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .btn a {
-  color: #191919;
+@media (min-width: 1400px) {
+  .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .btn {
+    margin-right: 25px;
+  }
 }
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .team .cards {
     display: flex;
-  }
-}
-@media (min-width: 1400px) {
-  .meetOurTeamSection .container .meetOurTeam .team .cards {
-    justify-content: space-evenly;
+    margin-left: 60px;
   }
 }
 .meetOurTeamSection .container .meetOurTeam .team .cards .card {
@@ -988,15 +1025,21 @@ header .container .mainMenu .loginButton {
   background-color: #f9d783;
   border: none;
 }
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .team .cards .card {
+    align-items: start;
+    margin-right: 30px;
+  }
+}
 .meetOurTeamSection .container .meetOurTeam .team .cards .card img {
   width: 60%;
 }
-@media (min-width: 992px) {
+@media (min-width: 769px) {
   .meetOurTeamSection .container .meetOurTeam .team .cards .card img {
-    width: 85%;
+    width: 50%;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .team .cards .card img {
     width: 100%;
   }
@@ -1006,7 +1049,22 @@ header .container .mainMenu .loginButton {
 }
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .team .cards .card h3 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .meetOurTeamSection .container .meetOurTeam .team .cards .card h3 {
     font-size: 22px;
+  }
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .team .cards .card p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1400px) {
+  .meetOurTeamSection .container .meetOurTeam .team .cards .card p {
+    font-size: 16px;
   }
 }
 .meetOurTeamSection .container .meetOurTeam .dots {
@@ -1014,12 +1072,217 @@ header .container .mainMenu .loginButton {
   justify-content: center;
 }
 .meetOurTeamSection .container .meetOurTeam .dots .dot {
-  font-size: 80px;
-  color: #191919;
-  opacity: 0.2;
+  font-size: 70px;
+  color: RGBA(25, 25, 25, 0.4);
   margin-left: 5px;
+  margin-bottom: 20px;
 }
 .meetOurTeamSection .container .meetOurTeam .dots .blackDot {
   color: #191919;
-  opacity: 1;
+}
+.meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection {
+  background: #FFF;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection {
+    width: 960px;
+    height: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection {
+    width: 1130px;
+  }
+}
+@media (min-width: 1400px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection {
+    width: 1320px;
+  }
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .sectionTitle p {
+    margin-top: 50px;
+  }
+}
+.meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews {
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+    margin-left: 30px;
+  }
+}
+.meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review {
+  margin-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review {
+    margin: 0;
+    margin: 20px;
+    text-align: left;
+  }
+}
+.meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .stars i {
+  margin-bottom: 20px;
+  color: #f94d1c;
+}
+.meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user {
+    justify-content: start;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user img {
+    width: 80%;
+  }
+}
+.meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user h3 {
+  margin: 0;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user h3 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user h3 {
+    font-size: 22px;
+  }
+}
+.meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user p {
+  color: #F94D1C;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user p {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user p {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1400px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user p {
+    font-size: 14px;
+  }
+}
+.meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .centerButton {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.articleAndNewsSection .container .articleAndNews .articles {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .articleAndNewsSection .container .articleAndNews .articles {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.articleAndNewsSection .container .articleAndNews .articles .article {
+  border: solid blue 1px;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .articleAndNewsSection .container .articleAndNews .articles .article {
+    margin: 20px;
+  }
+}
+.articleAndNewsSection .container .articleAndNews .articles .article .imgContainer {
+  position: relative;
+  width: 100%;
+}
+.articleAndNewsSection .container .articleAndNews .articles .article .imgContainer img {
+  width: 100%;
+  z-index: -1;
+}
+.articleAndNewsSection .container .articleAndNews .articles .article .imgContainer p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 15%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 0;
+  background: #f9d783;
+}
+.articleAndNewsSection .container .articleAndNews .articles .article .imgContainer p span {
+  font-family: "DM Sans", sasns-serif;
+  font-weight: 800;
+}
+.articleAndNewsSection .container .articleAndNews .articles .article .articleText {
+  padding: 10px;
+}
+.articleAndNewsSection .container .articleAndNews .articles .article .articleText .header {
+  color: #6A6C71;
+}
+@media (min-width: 992px) {
+  .articleAndNewsSection .container .articleAndNews .articles .article .articleText .header {
+    font-size: 14px;
+  }
+}
+.articleAndNewsSection .container .articleAndNews .articles .article .articleText h3 {
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  .articleAndNewsSection .container .articleAndNews .articles .article .articleText h3 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .articleAndNewsSection .container .articleAndNews .articles .article .articleText h3 {
+    font-size: 22px;
+  }
+}
+.articleAndNewsSection .container .articleAndNews .articles .article .articleText p {
+  color: #6A6C71;
+}
+@media (min-width: 992px) {
+  .articleAndNewsSection .container .articleAndNews .articles .article .articleText p {
+    font-size: 14px;
+  }
+}
+.articleAndNewsSection .container .articleAndNews .dots {
+  display: flex;
+  justify-content: center;
+}
+.articleAndNewsSection .container .articleAndNews .dots .dot {
+  font-size: 70px;
+  color: RGBA(25, 25, 25, 0.4);
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+.articleAndNewsSection .container .articleAndNews .dots .blackDot {
+  color: #191919;
 }
