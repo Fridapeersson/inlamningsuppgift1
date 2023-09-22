@@ -102,9 +102,13 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: 50px;
   padding-bottom: 30px;
   font-weight: 500;
+}
+@media (min-width: 992px) {
+  .sectionTitle {
+    padding-left: 60px;
+  }
 }
 .sectionTitle p {
   color: #f94d1c;
@@ -133,6 +137,77 @@
   }
 }
 
+.sectionTitleWithButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .sectionTitleWithButton {
+    padding-left: 60px;
+    align-items: start;
+  }
+}
+.sectionTitleWithButton .btn {
+  margin: 40px 0px;
+}
+@media (min-width: 1400px) {
+  .sectionTitleWithButton .btn {
+    margin-right: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .sectionTitleWithButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 25px;
+  }
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .sectionTitle {
+    padding-left: 60px;
+    align-items: start;
+  }
+}
+.sectionTitle .btn {
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .sectionTitle .btn {
+    margin-right: 25px;
+    margin-top: 55px;
+  }
+}
+@media (min-width: 1400px) {
+  .sectionTitle .btn {
+    margin-right: 25px;
+  }
+}
+
+.section {
+  padding-top: 50px;
+}
+@media (min-width: 992px) {
+  .section {
+    padding-top: 70px;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .section {
+    padding-top: 90px;
+  }
+}
+
 .gridWrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -144,8 +219,6 @@ header {
 }
 header .container {
   display: grid;
-  padding-top: 5px;
-  padding-bottom: 30px;
   align-items: center;
   grid-template-columns: 1fr auto;
   grid-template-areas: "logo menuBar";
@@ -332,12 +405,6 @@ header .container .mainMenu .loginButton {
   }
 }
 
-@media (min-width: 1400px) {
-  .companySection {
-    padding-top: 120px;
-    padding-bottom: 90px;
-  }
-}
 .companySection .container {
   display: flex;
   justify-content: center;
@@ -349,17 +416,17 @@ header .container .mainMenu .loginButton {
   justify-content: center;
 }
 .companySection .container .companies img {
-  max-width: 50%;
+  max-width: 40%;
 }
 @media (min-width: 992px) {
   .companySection .container .companies {
     width: 80%;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .companySection .container .companies {
-    width: 100%;
-    margin-left: 30px;
+    flex-wrap: nowrap;
+    width: 80%;
   }
 }
 
@@ -375,14 +442,36 @@ header .container .mainMenu .loginButton {
     padding: 25px;
   }
 }
+@media (min-width: 1200px) {
+  .featuresSection .container {
+    padding: 55px;
+  }
+}
 @media (min-width: 992px) {
   .featuresSection .container .sectionTitle {
+    width: 45%;
     padding-left: 50px;
     text-align: start;
   }
 }
+@media (min-width: 1200px) {
+  .featuresSection .container .sectionTitle {
+    width: 50%;
+  }
+}
+@media (min-width: 1400px) {
+  .featuresSection .container .sectionTitle {
+    width: 550px;
+  }
+}
+@media (min-width: 992px) {
+  .featuresSection .container .sectionTitle h2 {
+    margin-bottom: 50px;
+  }
+}
 @media (min-width: 1400px) {
   .featuresSection .container .sectionTitle h2 {
+    margin-bottom: 30px;
     font-size: 50px;
   }
 }
@@ -411,6 +500,18 @@ header .container .mainMenu .loginButton {
 @media (min-width: 992px) {
   .featuresSection .container .contentBox2 {
     text-align: start;
+    padding: 0;
+    margin-left: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .featuresSection .container .contentBox2 {
+    margin-right: -80px;
+  }
+}
+@media (min-width: 1400px) {
+  .featuresSection .container .contentBox2 {
+    margin-right: -80px;
   }
 }
 .featuresSection .container .contentBox2 .box1,
@@ -425,6 +526,15 @@ header .container .mainMenu .loginButton {
   .featuresSection .container .contentBox2 .box3,
   .featuresSection .container .contentBox2 .box4 {
     margin-top: 15px;
+    width: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .featuresSection .container .contentBox2 .box1,
+  .featuresSection .container .contentBox2 .box2,
+  .featuresSection .container .contentBox2 .box3,
+  .featuresSection .container .contentBox2 .box4 {
+    width: 270px;
   }
 }
 @media (min-width: 1400px) {
@@ -432,11 +542,11 @@ header .container .mainMenu .loginButton {
   .featuresSection .container .contentBox2 .box2,
   .featuresSection .container .contentBox2 .box3,
   .featuresSection .container .contentBox2 .box4 {
-    width: 307px;
+    width: 250px;
     padding: 0;
     margin: 0;
-    margin-left: 40px;
-    margin-top: 70px;
+    margin-left: 30px;
+    margin-top: 55px;
   }
 }
 .featuresSection .container .contentBox2 .box1 i,
@@ -488,17 +598,10 @@ header .container .mainMenu .loginButton {
   text-align: center;
   margin-top: 50px;
 }
-@media (min-width: 1400px) {
-  .aboutCompanySection .container {
-    margin-top: 120px;
-  }
-}
 @media (min-width: 992px) {
   .aboutCompanySection .container .aboutCompany {
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 120px;
-    margin-bottom: 90px;
   }
 }
 @media (min-width: 992px) {
@@ -527,16 +630,6 @@ header .container .mainMenu .loginButton {
 }
 .aboutCompanySection .container .aboutCompany .aboutCompanyInfo .aboutCompanyText p {
   padding-top: 20px;
-}
-@media (min-width: 992px) {
-  .aboutCompanySection .container .aboutCompany .aboutCompanyInfo .aboutCompanyText p {
-    padding-top: 20px;
-  }
-}
-@media (min-width: 1400px) {
-  .aboutCompanySection .container .aboutCompany .aboutCompanyInfo .aboutCompanyText p {
-    width: 492px;
-  }
 }
 .aboutCompanySection .container .aboutCompany .aboutCompanyInfo .buttonAndVideo {
   margin-bottom: 40px;
@@ -690,24 +783,39 @@ header .container .mainMenu .loginButton {
     margin-left: 50px;
   }
 }
+@media (min-width: 1200px) {
+  .ourServicesSection .container .sectionTitle {
+    width: 40%;
+  }
+}
 .ourServicesSection .container .boxesContainer {
   display: grid;
   grid-template-columns: 1fr;
+  width: 90%;
+  margin: 0 auto;
   gap: 20px;
   padding: 20px;
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 992px) {
+@media (min-width: 769px) {
   .ourServicesSection .container .boxesContainer {
     grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    gap: 40px;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 992px) {
+  .ourServicesSection .container .boxesContainer {
+    margin-top: 20px;
+    width: 70%;
+  }
+}
+@media (min-width: 1200px) {
   .ourServicesSection .container .boxesContainer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-left: 50px;
-    gap: 20px;
+    width: 91%;
   }
 }
 .ourServicesSection .container .boxesContainer .boxes {
@@ -737,6 +845,7 @@ header .container .mainMenu .loginButton {
   border: solid #191919 1px;
   width: 20%;
   margin-top: 20px;
+  margin-left: 3px;
 }
 .ourServicesSection .container .boxesContainer .boxes h3 {
   font-weight: 700;
@@ -748,8 +857,9 @@ header .container .mainMenu .loginButton {
 }
 .ourServicesSection .container .boxesContainer .boxes .boxesButton .blackButton {
   border-radius: 50%;
-  padding: 5px 10px;
+  padding: 10px;
   margin-right: 15px;
+  margin-bottom: 20px;
 }
 .ourServicesSection .container .browseServices {
   display: flex;
@@ -762,17 +872,9 @@ header .container .mainMenu .loginButton {
   margin-bottom: 50px;
 }
 @media (min-width: 992px) {
-  .ourServicesSection .container .browseServices .buttonTheme {
-    width: 221px;
-  }
-}
-
-@media (min-width: 992px) {
   .whyChooseUsSection .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 120px;
-    padding-bottom: 90px;
   }
 }
 @media (min-width: 992px) {
@@ -787,15 +889,13 @@ header .container .mainMenu .loginButton {
 @media (min-width: 992px) {
   .whyChooseUsSection .container .contentContainer .sectionTitle {
     text-align: left;
-    margin-left: 40px;
     padding-top: 0;
   }
 }
 @media (min-width: 1400px) {
   .whyChooseUsSection .container .contentContainer .sectionTitle {
-    margin-left: 80px;
     font-size: 46px;
-    width: 60%;
+    width: 75%;
   }
 }
 .whyChooseUsSection .container .contentContainer .content {
@@ -811,12 +911,14 @@ header .container .mainMenu .loginButton {
     align-items: center;
     text-align: left;
     margin: 0;
+    margin: 10px;
+    margin-left: 25px;
   }
 }
 @media (min-width: 1400px) {
   .whyChooseUsSection .container .contentContainer .content {
     justify-content: start;
-    margin-left: 80px;
+    margin-left: 55px;
   }
 }
 .whyChooseUsSection .container .contentContainer .content i {
@@ -967,60 +1069,23 @@ header .container .mainMenu .loginButton {
 
 .meetOurTeamSection {
   background-color: #f9d783;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
-@media (min-width: 992px) {
-  .meetOurTeamSection {
-    padding-top: 120px;
-    padding-bottom: 90px;
-  }
-}
-.meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 992px) {
-  .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-.meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .sectionTitle {
-  display: flex;
-  align-items: center;
-}
-@media (min-width: 992px) {
-  .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .sectionTitle {
-    padding-left: 60px;
-    align-items: start;
-  }
-}
-.meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .btn {
-  margin-bottom: 20px;
-}
-@media (min-width: 992px) {
-  .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .btn {
-    margin-right: 25px;
-    margin-top: 55px;
-  }
-}
-@media (min-width: 1400px) {
-  .meetOurTeamSection .container .meetOurTeam .sectionTitleWithButton .btn {
-    margin-right: 25px;
-  }
+.meetOurTeamSection .container .meetOurTeam .team .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  text-align: center;
 }
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .team .cards {
-    display: flex;
-    margin-left: 60px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 50px;
   }
 }
 .meetOurTeamSection .container .meetOurTeam .team .cards .card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 20px;
   background-color: #f9d783;
   border: none;
@@ -1032,20 +1097,21 @@ header .container .mainMenu .loginButton {
   }
 }
 .meetOurTeamSection .container .meetOurTeam .team .cards .card img {
-  width: 60%;
+  width: 100%;
 }
 @media (min-width: 769px) {
   .meetOurTeamSection .container .meetOurTeam .team .cards .card img {
-    width: 50%;
+    width: 90%;
   }
 }
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .team .cards .card img {
-    width: 100%;
+    width: 80%;
   }
 }
 .meetOurTeamSection .container .meetOurTeam .team .cards .card h3 {
   font-weight: 700;
+  font-size: 18px;
 }
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .team .cards .card h3 {
@@ -1056,6 +1122,9 @@ header .container .mainMenu .loginButton {
   .meetOurTeamSection .container .meetOurTeam .team .cards .card h3 {
     font-size: 22px;
   }
+}
+.meetOurTeamSection .container .meetOurTeam .team .cards .card p {
+  font-size: 14px;
 }
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .team .cards .card p {
@@ -1099,41 +1168,40 @@ header .container .mainMenu .loginButton {
     width: 1320px;
   }
 }
-@media (min-width: 992px) {
-  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .sectionTitle p {
-    margin-top: 50px;
-  }
+.meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .sectionTitle {
+  align-items: center;
 }
 .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews {
     display: flex;
     flex-direction: row;
-    margin-right: 50px;
-    margin-left: 30px;
+    gap: 40px;
   }
 }
 .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review {
   margin-bottom: 20px;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  padding: 20px;
+  padding: 30px;
 }
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review {
-    margin: 0;
-    margin: 20px;
     text-align: left;
   }
 }
 .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .stars i {
   margin-bottom: 20px;
   color: #f94d1c;
+}
+@media (min-width: 992px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .reviewText {
+    width: 230px;
+  }
 }
 .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user {
   display: flex;
@@ -1146,6 +1214,9 @@ header .container .mainMenu .loginButton {
     align-items: center;
   }
 }
+.meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user img {
+  margin-right: 15px;
+}
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user img {
     width: 80%;
@@ -1154,6 +1225,12 @@ header .container .mainMenu .loginButton {
 .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user h3 {
   margin: 0;
   font-weight: 700;
+}
+@media (min-width: 769px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user h3 {
+    font-size: 18px;
+    margin: 0;
+  }
 }
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user h3 {
@@ -1173,6 +1250,12 @@ header .container .mainMenu .loginButton {
 }
 .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user p {
   color: #F94D1C;
+}
+@media (min-width: 769px) {
+  .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user p {
+    font-size: 14px;
+    margin: 0;
+  }
 }
 @media (min-width: 992px) {
   .meetOurTeamSection .container .meetOurTeam .whatOurClientSaysSection .reviews .review .user p {
@@ -1201,22 +1284,34 @@ header .container .mainMenu .loginButton {
   text-align: center;
   align-items: center;
 }
+@media (min-width: 769px) {
+  .articleAndNewsSection .container .articleAndNews .articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
 @media (min-width: 992px) {
   .articleAndNewsSection .container .articleAndNews .articles {
-    flex-direction: row;
-    text-align: left;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 .articleAndNewsSection .container .articleAndNews .articles .article {
-  border: solid blue 1px;
   margin-bottom: 20px;
 }
 @media (min-width: 992px) {
   .articleAndNewsSection .container .articleAndNews .articles .article {
     margin: 20px;
+    margin-left: 60px;
   }
+}
+.articleAndNewsSection .container .articleAndNews .articles .article:hover {
+  background: #f9d783;
+  border-radius: 10px;
+  text-decoration: underline;
+}
+.articleAndNewsSection .container .articleAndNews .articles .article a {
+  text-decoration: none;
 }
 .articleAndNewsSection .container .articleAndNews .articles .article .imgContainer {
   position: relative;
@@ -1230,19 +1325,33 @@ header .container .mainMenu .loginButton {
   text-align: center;
   padding: 0;
   margin: 0;
-  width: 15%;
+  width: 10%;
+  padding: 2px;
   position: absolute;
   top: 10px;
   left: 10px;
   z-index: 0;
   background: #f9d783;
 }
+@media (min-width: 992px) {
+  .articleAndNewsSection .container .articleAndNews .articles .article .imgContainer p {
+    width: 18%;
+  }
+}
 .articleAndNewsSection .container .articleAndNews .articles .article .imgContainer p span {
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
   font-family: "DM Sans", sasns-serif;
   font-weight: 800;
 }
 .articleAndNewsSection .container .articleAndNews .articles .article .articleText {
   padding: 10px;
+}
+@media (min-width: 769px) {
+  .articleAndNewsSection .container .articleAndNews .articles .article .articleText {
+    text-align: left;
+  }
 }
 .articleAndNewsSection .container .articleAndNews .articles .article .articleText .header {
   color: #6A6C71;
@@ -1254,6 +1363,11 @@ header .container .mainMenu .loginButton {
 }
 .articleAndNewsSection .container .articleAndNews .articles .article .articleText h3 {
   font-weight: 700;
+}
+@media (min-width: 769px) {
+  .articleAndNewsSection .container .articleAndNews .articles .article .articleText h3 {
+    font-size: 20px;
+  }
 }
 @media (min-width: 992px) {
   .articleAndNewsSection .container .articleAndNews .articles .article .articleText h3 {
@@ -1285,4 +1399,86 @@ header .container .mainMenu .loginButton {
 }
 .articleAndNewsSection .container .articleAndNews .dots .blackDot {
   color: #191919;
+}
+
+.signUpForNewsSection {
+  background: #F0EFE9;
+  padding-bottom: 90px;
+}
+.signUpForNewsSection .container .signUpForNews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .signUpForNewsSection .container .signUpForNews .newsUpdateText {
+    display: flex;
+    gap: 70px;
+  }
+}
+.signUpForNewsSection .container .signUpForNews .newsUpdateText h2 {
+  font-family: "DM Sans" sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+@media (min-width: 1200px) {
+  .signUpForNewsSection .container .signUpForNews .newsUpdateText h2 {
+    margin-bottom: 0;
+    font-size: 35px;
+  }
+}
+.signUpForNewsSection .container .signUpForNews .newsUpdateText form .input {
+  background: #FFF;
+  font-style: italic;
+  color: RGBA(25, 25, 25, 0.5);
+  border-radius: 25px;
+  padding: 12px 25px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background: #0E1021;
+}
+footer .container .footerContent .imageBox {
+  color: #FFF;
+}
+footer .container .footerContent .imageBox img {
+  color: #FFF;
+}
+@media (min-width: 992px) {
+  footer .container .footerContent .imageBox img {
+    width: 100px;
+  }
+}
+footer .container .footerContent .imageBox p {
+  color: #FFF;
+}
+footer .container .footerContent .box {
+  color: #FFF;
+}
+footer .container .footerContent .box h3 {
+  padding: 20px 0;
+}
+footer .container .footerContent .box .links a {
+  text-decoration: none;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+footer .container .copyRightContainer {
+  border-top: solid #FFF 2px;
+  display: flex;
+  justify-content: space-around;
+}
+footer .container .copyRightContainer p {
+  color: #FFF;
+  font-size: 14px;
+}
+footer .container .copyRightContainer .socials i {
+  color: #FFF;
+}
+footer .container .copyRightContainer .socials i:hover {
+  color: #7c7c7c;
 }
