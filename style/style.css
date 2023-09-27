@@ -199,7 +199,7 @@
 @media (min-width: 992px) {
   .section {
     padding-top: 70px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 }
 @media (min-width: 1200px) {
@@ -1439,46 +1439,138 @@ header .container .mainMenu .loginButton {
   margin-bottom: 20px;
 }
 
-footer {
+.footerSection {
   background: #0E1021;
 }
-footer .container .footerContent .imageBox {
-  color: #FFF;
+.footerSection .container .footerContent {
+  display: grid;
 }
-footer .container .footerContent .imageBox img {
-  color: #FFF;
-}
-@media (min-width: 992px) {
-  footer .container .footerContent .imageBox img {
-    width: 100px;
+@media (min-width: 1400px) {
+  .footerSection .container .footerContent {
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 50px;
   }
 }
-footer .container .footerContent .imageBox p {
-  color: #FFF;
-}
-footer .container .footerContent .box {
-  color: #FFF;
-}
-footer .container .footerContent .box h3 {
-  padding: 20px 0;
-}
-footer .container .footerContent .box .links a {
-  text-decoration: none;
-  color: #FFF;
+.footerSection .container .footerContent .imageBox {
+  text-align: center;
   margin-bottom: 20px;
 }
-footer .container .copyRightContainer {
-  border-top: solid #FFF 2px;
+@media (min-width: 1400px) {
+  .footerSection .container .footerContent .imageBox {
+    text-align: left;
+    align-items: center;
+    justify-content: start;
+  }
+}
+.footerSection .container .footerContent .imageBox img {
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .footerSection .container .footerContent .imageBox img {
+    width: 20%;
+  }
+}
+@media (min-width: 1200px) {
+  .footerSection .container .footerContent .imageBox img {
+    width: 20%;
+  }
+}
+@media (min-width: 1400px) {
+  .footerSection .container .footerContent .imageBox img {
+    width: 60%;
+  }
+}
+.footerSection .container .footerContent .imageBox p {
+  color: white;
+}
+@media (min-width: 992px) {
+  .footerSection .container .footerContent .imageBox p {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1400px) {
+  .footerSection .container .footerContent .imageBox p {
+    text-align: left;
+    margin: 0;
+  }
+}
+.footerSection .container .footerContent .linkContainer {
+  display: grid;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .footerSection .container .footerContent .linkContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1400px) {
+  .footerSection .container .footerContent .linkContainer {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    margin-top: 20px;
+  }
+}
+.footerSection .container .footerContent .linkContainer .box {
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .footerSection .container .footerContent .linkContainer .box {
+    margin-bottom: 40px;
+  }
+}
+.footerSection .container .footerContent .linkContainer .box h3 {
+  color: white;
+  font-size: 22px;
+}
+@media (min-width: 1400px) {
+  .footerSection .container .footerContent .linkContainer .box h3 {
+    margin-bottom: 30px;
+  }
+}
+.footerSection .container .footerContent .linkContainer .box p {
+  padding: 10px;
+}
+@media (min-width: 1200px) {
+  .footerSection .container .footerContent .linkContainer .box p {
+    padding: 0;
+  }
+}
+.footerSection .container .footerContent .linkContainer .box p a {
+  color: white;
+  text-decoration: none;
+}
+@media (min-width: 1400px) {
+  .footerSection .container .footerContent .linkContainer .box p a {
+    padding: 2px;
+  }
+  .footerSection .container .footerContent .linkContainer .box p a:hover {
+    background: #f9d783;
+    color: #191919;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+}
+.footerSection .line {
+  border: solid white 1px;
+}
+.footerSection .copyRightContainer .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-footer .container .copyRightContainer p {
-  color: #FFF;
-  font-size: 14px;
+.footerSection .copyRightContainer .container p {
+  color: white;
 }
-footer .container .copyRightContainer .socials i {
-  color: #FFF;
+.footerSection .copyRightContainer .container .socials i {
+  color: white;
 }
-footer .container .copyRightContainer .socials i:hover {
-  color: #7c7c7c;
+.footerSection .copyRightContainer .container .socials i:hover {
+  cursor: pointer;
+  color: #f9d783;
 }
