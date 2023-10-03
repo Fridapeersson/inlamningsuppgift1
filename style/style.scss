@@ -1334,7 +1334,6 @@ header {
             img {
               width: 100%;
               z-index: -1;
-
             }
             p {
               text-align: center;
@@ -1366,7 +1365,7 @@ header {
             @media (min-width: 769px) {
               text-align: left;
             }
-            
+
             .header {
               color: #6a6c71;
               @media (min-width: 992px) {
@@ -1470,6 +1469,7 @@ header {
 .footerSection {
   background: #0e1021;
   position: relative;
+  padding-top: 50px;
 
   .backgroundLine {
     display: none;
@@ -1593,7 +1593,7 @@ header {
     border-top: solid white 1px;
     padding-bottom: 10px;
 
-    @media(min-width: 992px) {
+    @media (min-width: 992px) {
       padding-bottom: 20px;
     }
   }
@@ -1811,12 +1811,11 @@ header {
 .footerSection {
   .contactFooterLine {
     display: none;
-    @media(min-width: 992px) {
+    @media (min-width: 992px) {
       display: block;
       position: absolute;
-      right: 0; 
+      right: 0;
       bottom: 60px;
-
     }
   }
 }

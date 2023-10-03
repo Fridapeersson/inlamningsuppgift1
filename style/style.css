@@ -1480,6 +1480,7 @@ header .container .mainMenu .loginButton {
 .footerSection {
   background: #0e1021;
   position: relative;
+  padding-top: 50px;
 }
 .footerSection .backgroundLine {
   display: none;
