@@ -815,7 +815,7 @@ header {
       justify-content: center;
       align-items: center;
 
-      @media (min-width: 769px) {
+      @media (min-width: 768px) {
         grid-template-columns: 1fr 1fr;
         width: 80%;
         margin: auto;
@@ -834,6 +834,7 @@ header {
 
       .boxes {
         background: #fff;
+        padding: 20px;
 
         @media (min-width: 992px) {
           padding: 20px;
@@ -1308,19 +1309,13 @@ header {
         @media (min-width: 769px) {
           display: flex;
           flex-direction: row;
-          grid-template-columns: 1fr 1fr;
-          gap: 10px;
-        }
-
-        @media (min-width: 992px) {
-          grid-template-columns: 1fr 1fr 1fr;
+          gap: 20px;
         }
         .article {
           margin-bottom: 20px;
 
           @media (min-width: 992px) {
             margin: 20px;
-            margin-left: 60px;
           }
           &:hover {
             background: #f9d783;
@@ -1340,9 +1335,6 @@ header {
               width: 100%;
               z-index: -1;
 
-              @media (min-width: 992px) {
-                // width: 95%;
-              }
             }
             p {
               text-align: center;
@@ -1374,10 +1366,7 @@ header {
             @media (min-width: 769px) {
               text-align: left;
             }
-
-            @media (min-width: 992px) {
-              // padding: 20px;
-            }
+            
             .header {
               color: #6a6c71;
               @media (min-width: 992px) {
@@ -1488,7 +1477,7 @@ header {
       display: block;
       position: absolute;
       right: 0;
-      bottom: 90px;
+      bottom: 60px;
     }
   }
   .container {
@@ -1601,7 +1590,12 @@ header {
   }
 
   .line {
-    border: solid white 1px;
+    border-top: solid white 1px;
+    padding-bottom: 10px;
+
+    @media(min-width: 992px) {
+      padding-bottom: 20px;
+    }
   }
 
   .copyRightContainer {
@@ -1731,6 +1725,8 @@ header {
             text-decoration: none;
 
             &:hover {
+              text-decoration: underline;
+              color: #191919;
             }
             p {
               padding: 0;
@@ -1776,7 +1772,6 @@ header {
     h2 {
       text-align: center;
       font-weight: 700;
-      // padding-top: 50px;
       padding-bottom: 10px;
 
       @media (min-width: 992px) {
@@ -1804,6 +1799,24 @@ header {
       button {
         display: block;
       }
+    }
+  }
+}
+.map {
+  .googleMap {
+    width: 100%;
+  }
+}
+
+.footerSection {
+  .contactFooterLine {
+    display: none;
+    @media(min-width: 992px) {
+      display: block;
+      position: absolute;
+      right: 0; 
+      bottom: 60px;
+
     }
   }
 }

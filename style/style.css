@@ -831,7 +831,7 @@ header .container .mainMenu .loginButton {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .ourServicesSection .container .boxesContainer {
     grid-template-columns: 1fr 1fr;
     width: 80%;
@@ -853,6 +853,7 @@ header .container .mainMenu .loginButton {
 }
 .ourServicesSection .container .boxesContainer .boxes {
   background: #fff;
+  padding: 20px;
 }
 @media (min-width: 992px) {
   .ourServicesSection .container .boxesContainer .boxes {
@@ -1321,13 +1322,7 @@ header .container .mainMenu .loginButton {
   .articleAndNewsSection .container .articleAndNews .articles {
     display: flex;
     flex-direction: row;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-}
-@media (min-width: 992px) {
-  .articleAndNewsSection .container .articleAndNews .articles {
-    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
   }
 }
 .articleAndNewsSection .container .articleAndNews .articles .article {
@@ -1336,7 +1331,6 @@ header .container .mainMenu .loginButton {
 @media (min-width: 992px) {
   .articleAndNewsSection .container .articleAndNews .articles .article {
     margin: 20px;
-    margin-left: 60px;
   }
 }
 .articleAndNewsSection .container .articleAndNews .articles .article:hover {
@@ -1495,7 +1489,7 @@ header .container .mainMenu .loginButton {
     display: block;
     position: absolute;
     right: 0;
-    bottom: 90px;
+    bottom: 60px;
   }
 }
 .footerSection .container .footerContent {
@@ -1614,7 +1608,13 @@ header .container .mainMenu .loginButton {
   }
 }
 .footerSection .line {
-  border: solid white 1px;
+  border-top: solid white 1px;
+  padding-bottom: 10px;
+}
+@media (min-width: 992px) {
+  .footerSection .line {
+    padding-bottom: 20px;
+  }
 }
 .footerSection .copyRightContainer .container {
   display: flex;
@@ -1728,6 +1728,10 @@ header .container .mainMenu .loginButton {
 .companyInfoSection .container .boxContainer .boxes .boxHeaderAndText a {
   text-decoration: none;
 }
+.companyInfoSection .container .boxContainer .boxes .boxHeaderAndText a:hover {
+  text-decoration: underline;
+  color: #191919;
+}
 .companyInfoSection .container .boxContainer .boxes .boxHeaderAndText a p {
   padding: 0;
   margin: 0;
@@ -1794,4 +1798,20 @@ header .container .mainMenu .loginButton {
 }
 .messageUs .container #contactForm button {
   display: block;
+}
+
+.map .googleMap {
+  width: 100%;
+}
+
+.footerSection .contactFooterLine {
+  display: none;
+}
+@media (min-width: 992px) {
+  .footerSection .contactFooterLine {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+  }
 }
