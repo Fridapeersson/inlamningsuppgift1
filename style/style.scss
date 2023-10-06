@@ -776,6 +776,26 @@ header {
             }
           }
         }
+
+        .founderLine{
+          display: none;
+      
+          @media(min-width: 992px) {
+            display: block;
+            position: absolute;
+            // border: solid red 1px;
+            width: 30%;
+            top: 50px;
+            left: -25px;
+            z-index: 1;
+          }
+          @media(min-width: 1400px) {
+            width: 226px;
+            height: 100px;
+            left: -50px;
+            top: 70px;
+          }
+        }
       }
     }
   }

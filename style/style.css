@@ -793,6 +793,27 @@ header .container .mainMenu .loginButton {
     padding-top: 10px;
   }
 }
+.aboutCompanySection .container .aboutCompany .founder .founderLine {
+  display: none;
+}
+@media (min-width: 992px) {
+  .aboutCompanySection .container .aboutCompany .founder .founderLine {
+    display: block;
+    position: absolute;
+    width: 30%;
+    top: 50px;
+    left: -25px;
+    z-index: 1;
+  }
+}
+@media (min-width: 1400px) {
+  .aboutCompanySection .container .aboutCompany .founder .founderLine {
+    width: 226px;
+    height: 100px;
+    left: -50px;
+    top: 70px;
+  }
+}
 
 .ourServicesSection {
   background: #f0efe9;
